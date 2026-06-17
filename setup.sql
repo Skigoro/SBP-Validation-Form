@@ -13,5 +13,7 @@ CREATE TABLE IF NOT EXISTS sbp_applications (
     amount_paid DECIMAL(10,2) NOT NULL,
     comment TEXT NULL,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    UNIQUE KEY unique_application_no (application_no),
+    UNIQUE KEY unique_sbp_no (sbp_no)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

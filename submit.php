@@ -35,6 +35,21 @@ if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)
 
 try {
     $pdo = getDbConnection();
+// check for duplicate
+    $check = $pdo->prepare(
+        "SELECT id FROM sbp_applications
+         WHERE application_no = :application_no
+            OR sbp_no = :sbp_no"
+    );
+    
+    $check->execute([
+        ':application_no' => $applicationNo,
+        ':sbp_no' => $sbpNo
+    ]);
+    
+    if ($check->fetch()) {
+        redirect('duplicate');
+    }
     $stmt = $pdo->prepare(
         'INSERT INTO sbp_applications
         (email, ward, sbp_no, application_no, business_name, type_of_business, town_market, amount_paid, comment)

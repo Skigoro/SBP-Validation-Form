@@ -5,8 +5,8 @@ $alertClass = '';
 if ($status === 'success') {
     $message = 'Your SBP validation request has been submitted successfully.';
     $alertClass = 'success';
-} elseif ($status === 'error') {
-    $message = 'The information you are trying to save already exists in the database.';
+} elseif ($status === 'duplicate') {
+    $message = 'Application Number or SBP Number already exists.';
     $alertClass = 'error';
 }
 ?>
