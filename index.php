@@ -83,8 +83,9 @@ if ($status === 'success') {
                     <label for="ward">Ward <span class="required">*</span></label>
                     <select id="ward" name="ward" required>
                         <option value="">Select an option</option>
+                        <option value="Karau">Karau</option>
                         <option value="Engineer">Engineer</option>
-                        <option value="Kanjuiri-Riri">Kanjuiri-Riri</option>
+                        <option value="Kanjuiri">Kanjuiri-Range</option>
                         <option value="Kiriita">Kiriita</option>
                         <option value="Karima">Karima</option>
                         <option value="Mirangine">Mirangine</option>
@@ -97,7 +98,6 @@ if ($status === 'success') {
                         <option value="Shamata">Shamata</option>
                         <option value="Kanjuiri">Kanjuiri</option>
                         <option value="Kiriita-Main">Kiriita-Main</option>
-                        <option value="Other">Other</option>
                     </select>
                     <div class="error-message" id="wardError">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
